@@ -38,8 +38,9 @@ class location(models.Model):
 
 class category(models.Model):
     category = models.CharField(max_length = 30)
-    # def save_category(self):
-    #     save.self()
+    
+    def save_category(self):
+        save.self()
 
 
 #
