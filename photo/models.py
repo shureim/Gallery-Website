@@ -36,12 +36,12 @@ class location(models.Model):
          updated = cls.objects.filter(image_name=location).update(name=update)
          return updated
 
-# class category(models.Model):
-#     category = models.CharField(max_length = 30)
-#     def save_category(self):
-#         save.self()
-#
-#
+class category(models.Model):
+    category = models.CharField(max_length = 30)
+    # def save_category(self):
+    #     save.self()
+
+
 #
 #     def delete_location(self):
 #         self.delete()
