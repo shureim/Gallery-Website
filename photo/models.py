@@ -27,10 +27,10 @@ class location(models.Model):
 
     def save_location(self):
         save.self()
-#
-#     def delete_location(self):
-#         self.delete()
-#
+
+    def delete_location(self):
+        self.delete()
+
 #     @classmethod
 #     def update_location(cls,location,update):
 #          updated = cls.objects.filter(image_name=location).update(name=update)
