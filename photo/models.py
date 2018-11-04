@@ -44,11 +44,11 @@ class category(models.Model):
 
     def delete_location(self):
         self.delete()
-#
-#     @classmethod
-#     def update_location(cls,location,update):
-#          updated = cls.objects.filter(image_name=location).update(name=update)
-#          return updated
+
+    @classmethod
+    def update_location(cls,location,update):
+         updated = cls.objects.filter(image_name=location).update(name=update)
+         return updated
 #
 #     verbose_name_plural = "Categories"
 #
