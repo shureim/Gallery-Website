@@ -1,0 +1,37 @@
+<!-- {%extends 'all-photos/base.html'%}
+
+{% block content %}
+{{block.super}}
+
+<div class="container">
+
+
+
+
+  <div class="row">
+    {% for photo_item in photo %}
+
+    {% if photo_item.image %}
+    <div class="col-md-4">
+      <img src="{{photo_item.image.url}}" class="img-responsive" alt="Image">
+      <h4 class = "text-center" style="color:green;"> <a href="{% url 'image' photo_item.id %}"> {{photo_item.image_name}} </a></h4>
+
+    </div>
+    {% else %}
+    <div class="col-md-4">
+      <img src="https://banner2.kisspng.com/20180605/wzl/kisspng-computer-icons-image-file-formats-no-image-5b16ff0d4b81e2.4246835515282337413093.jpg" class="img-responsive" alt="Image">
+    </div>
+    {% endif %}
+
+
+  {% empty %}
+  <div class="row">
+    <h2 class="text-center">There No Photo Items</h2>
+  </div>
+  {% endfor %}
+</div>
+
+</div>
+
+
+{% endblock %} -->
