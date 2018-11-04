@@ -24,6 +24,9 @@ class location(models.Model):
 
     def __str__(self):
         return self.name
+
+    def save_location(self):
+        save.self()
 #
 #     def delete_location(self):
 #         self.delete()
