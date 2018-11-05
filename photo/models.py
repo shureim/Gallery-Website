@@ -53,6 +53,7 @@ class category(models.Model):
          return updated
 
     verbose_name_plural = "Categories"
+    
 
 class Image(models.Model):
     image = models.ImageField(upload_to = 'images/',blank = True)
