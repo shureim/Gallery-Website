@@ -39,6 +39,8 @@ class location(models.Model):
 class category(models.Model):
     category = models.CharField(max_length = 30)
 
+
+
     def save_category(self):
         save.self()
 
@@ -90,11 +92,11 @@ class Image(models.Model):
 
 
     @classmethod
-    def filter_by_Location(cls, loc):
-        loc = cls.objects.filter(location=loc)
-        return cls.objects.filter(location=loc)
+    def filter_by_location(cls, location):
+        location = cls.objects.filter(location=location)
+        return location
 
     @classmethod
     def search_by_category(cls,search_term):
-        photo = cls.objects.filter(image_category = search_term)
+        photo = cls.objects.filter(image_category__category = search_term)
         return photo

@@ -13,23 +13,44 @@
 
     {% block styles %}
       {% bootstrap_css %}
-      <!-- <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Spicy+Rice" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Spicy+Rice" rel="stylesheet"> -->
+      <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Indie+Flower|Spicy+Rice" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Spicy+Rice" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Spicy+Rice" rel="stylesheet">
       <link rel="stylesheet" href="{% static 'css/basephotos.css' %}">
+
     {% endblock %}
 
   </head>
   <body>
     {% include "navbar.html" %}
 
+    <style>
+      body{
+        background-color: white;
+      }
+
+    </style>
     {% block content %}
     <h1 class="text-center" > photo for today {{date|date:"d-F Y"}}</h1>
     <hr>
     {% endblock%}
 
     {% block scripts %}
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     {% bootstrap_javascript %}
+    <script>
+    function myFunction() {
+        /* Get the text field */
+        var copyText = document.getElementById("myInput");
+        /* Select the text field */
+        copyText.select();
+        /* Copy the text inside the text field */
+        document.execCommand("copy");
+        /* Alert the copied text */
+        alert("Copied the text: " + copyText.value);
+        }
+      </script>
     {% endblock %}
 
 

@@ -38,11 +38,11 @@ def search_results(request):
         searched_images = Image.search_by_category(search_term)
         message = f"{search_term}"
 
-        return render(request, 'all-photos/search.html',{"message":message,"images": searched_images, 'category':category})
+        return render(request, 'all-photos/search.html',{"message":message,"images": searched_images})
 
     else:
         message = "You haven't searched for any term"
-        return render(request, 'all-photos/search.html',{"message":message, 'category':category })
+        return render(request, 'all-photos/search.html',{"message":message})
 
 def category_results(request,category):
     searched_images=Image.filter_by_category(category)

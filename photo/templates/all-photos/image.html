@@ -26,20 +26,30 @@
      <div class="col-md-8">
        <style>
        .image_description{
+
          font-family: 'Spicy Rice', cursive;
          font-family: 'Indie Flower', cursive;
          font-size: 30px;
        }
+       #loc{
+
+         font-family: 'Spicy Rice', cursive;
+         font-family: 'Indie Flower', cursive;
+         font-family: 'Gloria Hallelujah', cursive;
+         font-size: 20px;
+       }
+
        </style>
        <p class = "image_description">{{image.image_description}}</p>
      </div>
      <div class="col-md-2">
      </div>
    </div>
+   <p class="text-center" id ="loc"> Image Location {{image.image_location}} : Category {{image.image_category}}</p>
 
-
-     <footer class="text-center">Posted ({{image.photo_date|timesince}}) by ({{image.photography.first_name}})</footer>
-
+     <footer class="text-center">Image posted since ({{image.photo_date|timesince}}) Photo credit ({{image.photography.first_name}})
+       <br>
+     Link to this Image:<span><input id="myInput" type="text" value="https://gallery-best.herokuapp.com/image/{{image.id}}"><a href="#" class="btn" onclick="myFunction()">copy</a></span></footer>
 
  </div>
 
